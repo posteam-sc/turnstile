@@ -1,0 +1,35 @@
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS.Watch\bin\Debug\ZTS.Watch.exe.config
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS.Watch\bin\Debug\ZTS.Watch.exe
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS.Watch\bin\Debug\ZTS.Watch.pdb
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS.Watch\bin\Debug\EntityFramework.dll
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS.Watch\bin\Debug\n3kAdrtC.dll
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS.Watch\bin\Debug\EntityFramework.xml
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS.Watch\obj\Debug\ZTS.Watch.Properties.Resources.resources
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS.Watch\obj\Debug\ZTS.Watch.WatchTurnstiles.resources
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS.Watch\obj\Debug\ZTS.Watch.csproj.GenerateResource.Cache
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS.Watch\obj\Debug\ZTS.Watch.exe
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS.Watch\obj\Debug\ZTS.Watch.pdb
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\bin\Debug\ZTS.Watch.exe.config
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\bin\Debug\ZTS.Watch.exe
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\bin\Debug\ZTS.Watch.pdb
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\bin\Debug\EntityFramework.dll
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\bin\Debug\n3kAdrtC.dll
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\bin\Debug\EntityFramework.xml
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.Properties.Resources.resources
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.WatchTurnstiles.resources
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.csproj.GenerateResource.Cache
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.exe
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.pdb
+E:\ALL Projects\TrunstileControl\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\ZTS.Watch.exe.config
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\ZTS.Watch.exe
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\ZTS.Watch.pdb
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\n3kAdrtC.dll
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.Properties.Resources.resources
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.WatchTurnstiles.resources
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.exe
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.pdb

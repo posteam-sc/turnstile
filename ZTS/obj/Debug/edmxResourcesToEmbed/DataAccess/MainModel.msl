@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MainModelStoreContainer" CdmEntityContainer="GateEntities">
+    <EntitySetMapping Name="Tickets">
+      <EntityTypeMapping TypeName="MainModel.Ticket">
+        <MappingFragment StoreEntitySet="Ticket">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+          <ScalarProperty Name="TransactionDetailId" ColumnName="TransactionDetailId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="EnteranceDate" ColumnName="EnteranceDate" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="MainModel.Transaction">
+        <MappingFragment StoreEntitySet="Transaction">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+          <ScalarProperty Name="IsComplete" ColumnName="IsComplete" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PaymentTypeId" ColumnName="PaymentTypeId" />
+          <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="RecieveAmount" ColumnName="RecieveAmount" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="GiftCardId" ColumnName="GiftCardId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="MCDiscountAmt" ColumnName="MCDiscountAmt" />
+          <ScalarProperty Name="BDDiscountAmt" ColumnName="BDDiscountAmt" />
+          <ScalarProperty Name="MemberTypeId" ColumnName="MemberTypeId" />
+          <ScalarProperty Name="MCDiscountPercent" ColumnName="MCDiscountPercent" />
+          <ScalarProperty Name="ReceivedCurrencyId" ColumnName="ReceivedCurrencyId" />
+          <ScalarProperty Name="IsSettlement" ColumnName="IsSettlement" />
+          <ScalarProperty Name="TranVouNos" ColumnName="TranVouNos" />
+          <ScalarProperty Name="IsWholeSale" ColumnName="IsWholeSale" />
+          <ScalarProperty Name="GiftCardAmount" ColumnName="GiftCardAmount" />
+          <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="TableIdOrQue" ColumnName="TableIdOrQue" />
+          <ScalarProperty Name="ServiceFee" ColumnName="ServiceFee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionDetails">
+      <EntityTypeMapping TypeName="MainModel.TransactionDetail">
+        <MappingFragment StoreEntitySet="TransactionDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+          <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ConsignmentPrice" ColumnName="ConsignmentPrice" />
+          <ScalarProperty Name="IsConsignmentPaid" ColumnName="IsConsignmentPaid" />
+          <ScalarProperty Name="IsFOC" ColumnName="IsFOC" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turnstiles">
+      <EntityTypeMapping TypeName="MainModel.Turnstile">
+        <MappingFragment StoreEntitySet="Turnstile">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="door" ColumnName="door" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+          <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+          <ScalarProperty Name="onoff" ColumnName="onoff" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TurnStileServers">
+      <EntityTypeMapping TypeName="MainModel.TurnStileServer">
+        <MappingFragment StoreEntitySet="TurnStileServer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetTicketBy_TDID" FunctionName="MainModel.Store.GetTicketBy_TDID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MainModel.GetTicketBy_TDID_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+          <ScalarProperty Name="TransactionDetailId" ColumnName="TransactionDetailId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="EnteranceDate" ColumnName="EnteranceDate" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetTicketByQr" FunctionName="MainModel.Store.GetTicketByQr" />
+    <FunctionImportMapping FunctionImportName="UpdateTicketby_No" FunctionName="MainModel.Store.UpdateTicketby_No" />
+  </EntityContainerMapping>
+</Mapping>

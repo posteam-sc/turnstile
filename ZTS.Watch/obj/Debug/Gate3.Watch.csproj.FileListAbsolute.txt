@@ -1,0 +1,11 @@
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\Gate3.Watch.exe.config
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\Gate3.Watch.exe
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\Gate3.Watch.pdb
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\n3kAdrtC.dll
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.Properties.Resources.resources
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.WatchTurnstiles.resources
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\Gate3.Watch.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\Gate3.Watch.exe
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\Gate3.Watch.pdb

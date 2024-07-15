@@ -1,0 +1,73 @@
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\Gate1.Watch.exe.config
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\Gate1.Watch.exe
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\Gate1.Watch.pdb
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\n3kAdrtC.dll
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.Properties.Resources.resources
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.WatchTurnstiles.resources
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.exe
+C:\Users\Administrator\Desktop\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.pdb
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\Gate1.Watch.exe.config
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.exe
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.pdb
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\Gate1.Watch.exe
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\Gate1.Watch.pdb
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\EntityFramework.dll
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\n3kAdrtC.dll
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\EntityFramework.xml
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.csprojResolveAssemblyReference.cache
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.Properties.Resources.resources
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.WatchTurnstiles.resources
+E:\HMT\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.csproj.GenerateResource.Cache
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\Gate1.Watch.exe.config
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.exe
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.pdb
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\Gate1.Watch.exe
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\Gate1.Watch.pdb
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\EntityFramework.dll
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\n3kAdrtC.dll
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\EntityFramework.xml
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.csprojResolveAssemblyReference.cache
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.Properties.Resources.resources
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\ZTS.Watch.WatchTurnstiles.resources
+D:\AMK refer\Debug File\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.csproj.GenerateResource.Cache
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\Lastest Zoo file\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\bin\Debug\Gate1.Watch.exe.config
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\Lastest Zoo file\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.exe
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\Lastest Zoo file\Hlawga Zoo Updated file_03-09-2019\Hlaga zoo 15\New folder\TurnstileSystem\TurnstileSystem\Development\trunk\ZTS.Watch\obj\Debug\Gate1.Watch.pdb
+C:\SourceCodeCo\Sourcecode\turnstile\ZTS.Watch\bin\Debug\Gate1.Watch.exe.config
+C:\SourceCodeCo\Sourcecode\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.exe
+C:\SourceCodeCo\Sourcecode\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.pdb
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\bin\Debug\Gate1.Watch.exe.config
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.exe
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.pdb
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\bin\Debug\Gate1.Watch.exe.config
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\bin\Debug\Gate1.Watch.exe
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\bin\Debug\Gate1.Watch.pdb
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\bin\Debug\EntityFramework.dll
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\bin\Debug\n3kAdrtC.dll
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\bin\Debug\EntityFramework.xml
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.csprojAssemblyReference.cache
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\obj\Debug\ZTS.Watch.Properties.Resources.resources
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\obj\Debug\ZTS.Watch.WatchTurnstiles.resources
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.csproj.GenerateResource.cache
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.csproj.CoreCompileInputs.cache
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.csproj.CopyComplete
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.exe
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.pdb
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\bin\Debug\Gate1.Watch.exe.config
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\bin\Debug\Gate1.Watch.exe
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\bin\Debug\Gate1.Watch.pdb
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\bin\Debug\EntityFramework.dll
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\bin\Debug\n3kAdrtC.dll
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\bin\Debug\EntityFramework.xml
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.csprojAssemblyReference.cache
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\obj\Debug\ZTS.Watch.Properties.Resources.resources
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\obj\Debug\ZTS.Watch.WatchTurnstiles.resources
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.csproj.GenerateResource.cache
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.csproj.CoreCompileInputs.cache
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.csproj.CopyComplete
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.exe
+D:\Latest Project(YMO)\turnstile\ZTS.Watch\obj\Debug\Gate1.Watch.pdb

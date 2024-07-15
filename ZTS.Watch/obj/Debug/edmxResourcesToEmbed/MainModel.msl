@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MainModelStoreContainer" CdmEntityContainer="GateEntities">
+    <EntitySetMapping Name="Turnstiles">
+      <EntityTypeMapping TypeName="MainModel.Turnstile">
+        <MappingFragment StoreEntitySet="Turnstile">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="door" ColumnName="door" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+          <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+          <ScalarProperty Name="onoff" ColumnName="onoff" />
+          <ScalarProperty Name="PlaceStatus" ColumnName="PlaceStatus" />
+          <ScalarProperty Name="IsAcceptChild" ColumnName="IsAcceptChild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TurnStileServers">
+      <EntityTypeMapping TypeName="MainModel.TurnStileServer">
+        <MappingFragment StoreEntitySet="TurnStileServer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UpdateTicketby_No" FunctionName="MainModel.Store.UpdateTicketby_No" />
+    <EntitySetMapping Name="Tickets">
+      <EntityTypeMapping TypeName="MainModel.Ticket">
+        <MappingFragment StoreEntitySet="Ticket">
+          <ScalarProperty Name="PlaceStatus" ColumnName="PlaceStatus" />
+          <ScalarProperty Name="RePrint" ColumnName="RePrint" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+          <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="EnteranceDate" ColumnName="EnteranceDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TransactionDetailId" ColumnName="TransactionDetailId" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,33 @@
+C:\SourceCodeCo\Sourcecode\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.Properties.Resources.resources
+C:\SourceCodeCo\Sourcecode\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.WatchTurnstiles.resources
+C:\SourceCodeCo\Sourcecode\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.csproj.GenerateResource.Cache
+C:\SourceCodeCo\Sourcecode\turnstile\Gate3.Watch\bin\Debug\Gate3.Watch.exe.config
+C:\SourceCodeCo\Sourcecode\turnstile\Gate3.Watch\bin\Debug\Gate3.Watch.exe
+C:\SourceCodeCo\Sourcecode\turnstile\Gate3.Watch\bin\Debug\Gate3.Watch.pdb
+C:\SourceCodeCo\Sourcecode\turnstile\Gate3.Watch\bin\Debug\EntityFramework.dll
+C:\SourceCodeCo\Sourcecode\turnstile\Gate3.Watch\bin\Debug\EntityFramework.xml
+C:\SourceCodeCo\Sourcecode\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.exe
+C:\SourceCodeCo\Sourcecode\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.pdb
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\bin\Debug\Gate3.Watch.exe.config
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\bin\Debug\Gate3.Watch.exe
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\bin\Debug\Gate3.Watch.pdb
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\bin\Debug\EntityFramework.dll
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\bin\Debug\EntityFramework.xml
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.Properties.Resources.resources
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.WatchTurnstiles.resources
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.csproj.GenerateResource.Cache
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.exe
+C:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.pdb
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\bin\Debug\Gate3.Watch.exe.config
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\bin\Debug\Gate3.Watch.exe
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\bin\Debug\Gate3.Watch.pdb
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\bin\Debug\EntityFramework.dll
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\bin\Debug\EntityFramework.xml
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.csprojAssemblyReference.cache
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.Properties.Resources.resources
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.WatchTurnstiles.resources
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.csproj.GenerateResource.cache
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.csproj.CoreCompileInputs.cache
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.csproj.CopyComplete
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.exe
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\Gate3.Watch\obj\Debug\Gate3.Watch.pdb

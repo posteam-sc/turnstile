@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MainModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TicketNo" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TicketNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TransactionDetailId" Type="bigint" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="EnteranceDate" Type="datetime" />
+          <Property Name="Category" Type="varchar" MaxLength="50" />
+          <Property Name="ReadCount" Type="bigint" />
+          <Property Name="UserDefinded" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="CounterId" Type="int" />
+          <Property Name="Type" Type="varchar" MaxLength="20" />
+          <Property Name="IsPaid" Type="bit" />
+          <Property Name="IsComplete" Type="bit" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="PaymentTypeId" Type="int" />
+          <Property Name="TaxAmount" Type="int" />
+          <Property Name="DiscountAmount" Type="int" />
+          <Property Name="TotalAmount" Type="bigint" />
+          <Property Name="RecieveAmount" Type="bigint" />
+          <Property Name="ParentId" Type="varchar" MaxLength="20" />
+          <Property Name="GiftCardId" Type="int" />
+          <Property Name="CustomerId" Type="int" />
+          <Property Name="MCDiscountAmt" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BDDiscountAmt" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="MemberTypeId" Type="int" />
+          <Property Name="MCDiscountPercent" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="ReceivedCurrencyId" Type="int" />
+          <Property Name="IsSettlement" Type="bit" />
+          <Property Name="TranVouNos" Type="varchar" MaxLength="1000" />
+          <Property Name="IsWholeSale" Type="bit" />
+          <Property Name="GiftCardAmount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ShopId" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="TableIdOrQue" Type="int" />
+          <Property Name="ServiceFee" Type="int" />
+        </EntityType>
+        <EntityType Name="TransactionDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransactionId" Type="varchar" MaxLength="20" />
+          <Property Name="ProductId" Type="bigint" />
+          <Property Name="Qty" Type="int" />
+          <Property Name="UnitPrice" Type="bigint" />
+          <Property Name="DiscountRate" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="TaxRate" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="TotalAmount" Type="bigint" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="ConsignmentPrice" Type="bigint" />
+          <Property Name="IsConsignmentPaid" Type="bit" />
+          <Property Name="IsFOC" Type="bit" />
+          <Property Name="SellingPrice" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Turnstile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="SerialNo" Type="int" Nullable="false" />
+          <Property Name="IP" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Port" Type="int" Nullable="false" />
+          <Property Name="door" Type="int" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+          <Property Name="ServerID" Type="int" Nullable="false" />
+          <Property Name="UserDefinded" Type="nvarchar" MaxLength="200" />
+          <Property Name="onoff" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TurnStileServer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ServerIP" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Port" Type="int" Nullable="false" />
+          <Property Name="UserDefinded" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <Association Name="FK_Ticket_TransactionDetail">
+          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="1" />
+          <End Role="Ticket" Type="Self.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TransactionDetail">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="TransactionDetailId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Transaction_Transaction">
+          <End Role="Transaction" Type="Self.Transaction" Multiplicity="0..1" />
+          <End Role="Transaction1" Type="Self.Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transaction">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Transaction1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionDetail_Transaction">
+          <End Role="Transaction" Type="Self.Transaction" Multiplicity="0..1" />
+          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transaction">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TransactionDetail">
+              <PropertyRef Name="TransactionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Turnstile_TurnStileServer">
+          <End Role="TurnStileServer" Type="Self.TurnStileServer" Multiplicity="1" />
+          <End Role="Turnstile" Type="Self.Turnstile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TurnStileServer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Turnstile">
+              <PropertyRef Name="ServerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetTicketBy_TDID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tdid" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="GetTicketByQr" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="qr" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="UpdateTicketby_No" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="qr" Type="bigint" Mode="In" />
+        </Function>
+        <EntityContainer Name="MainModelStoreContainer">
+          <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransactionDetail" EntityType="Self.TransactionDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Turnstile" EntityType="Self.Turnstile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TurnStileServer" EntityType="Self.TurnStileServer" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Ticket_TransactionDetail" Association="Self.FK_Ticket_TransactionDetail">
+            <End Role="TransactionDetail" EntitySet="TransactionDetail" />
+            <End Role="Ticket" EntitySet="Ticket" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transaction_Transaction" Association="Self.FK_Transaction_Transaction">
+            <End Role="Transaction" EntitySet="Transaction" />
+            <End Role="Transaction1" EntitySet="Transaction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionDetail_Transaction" Association="Self.FK_TransactionDetail_Transaction">
+            <End Role="Transaction" EntitySet="Transaction" />
+            <End Role="TransactionDetail" EntitySet="TransactionDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Turnstile_TurnStileServer" Association="Self.FK_Turnstile_TurnStileServer">
+            <End Role="TurnStileServer" EntitySet="TurnStileServer" />
+            <End Role="Turnstile" EntitySet="Turnstile" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MainModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TicketNo" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TicketNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TransactionDetailId" Type="Int64" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EnteranceDate" Type="DateTime" Precision="3" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReadCount" Type="Int64" />
+          <Property Name="UserDefinded" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TransactionDetail" Relationship="Self.FK_Ticket_TransactionDetail" FromRole="Ticket" ToRole="TransactionDetail" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="CounterId" Type="Int32" />
+          <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IsPaid" Type="Boolean" />
+          <Property Name="IsComplete" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="PaymentTypeId" Type="Int32" />
+          <Property Name="TaxAmount" Type="Int32" />
+          <Property Name="DiscountAmount" Type="Int32" />
+          <Property Name="TotalAmount" Type="Int64" />
+          <Property Name="RecieveAmount" Type="Int64" />
+          <Property Name="ParentId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="GiftCardId" Type="Int32" />
+          <Property Name="CustomerId" Type="Int32" />
+          <Property Name="MCDiscountAmt" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BDDiscountAmt" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="MemberTypeId" Type="Int32" />
+          <Property Name="MCDiscountPercent" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ReceivedCurrencyId" Type="Int32" />
+          <Property Name="IsSettlement" Type="Boolean" />
+          <Property Name="TranVouNos" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="IsWholeSale" Type="Boolean" />
+          <Property Name="GiftCardAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ShopId" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TableIdOrQue" Type="Int32" />
+          <Property Name="ServiceFee" Type="Int32" />
+          <NavigationProperty Name="Transaction1" Relationship="Self.FK_Transaction_Transaction" FromRole="Transaction" ToRole="Transaction1" />
+          <NavigationProperty Name="Transaction2" Relationship="Self.FK_Transaction_Transaction" FromRole="Transaction1" ToRole="Transaction" />
+          <NavigationProperty Name="TransactionDetails" Relationship="Self.FK_TransactionDetail_Transaction" FromRole="Transaction" ToRole="TransactionDetail" />
+        </EntityType>
+        <EntityType Name="TransactionDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransactionId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ProductId" Type="Int64" />
+          <Property Name="Qty" Type="Int32" />
+          <Property Name="UnitPrice" Type="Int64" />
+          <Property Name="DiscountRate" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="TaxRate" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="TotalAmount" Type="Int64" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="ConsignmentPrice" Type="Int64" />
+          <Property Name="IsConsignmentPaid" Type="Boolean" />
+          <Property Name="IsFOC" Type="Boolean" />
+          <Property Name="SellingPrice" Type="Int64" />
+          <NavigationProperty Name="Tickets" Relationship="Self.FK_Ticket_TransactionDetail" FromRole="TransactionDetail" ToRole="Ticket" />
+          <NavigationProperty Name="Transaction" Relationship="Self.FK_TransactionDetail_Transaction" FromRole="TransactionDetail" ToRole="Transaction" />
+        </EntityType>
+        <EntityType Name="Turnstile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SerialNo" Type="Int32" Nullable="false" />
+          <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Port" Type="Int32" Nullable="false" />
+          <Property Name="door" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+          <Property Name="ServerID" Type="Int32" Nullable="false" />
+          <Property Name="UserDefinded" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="onoff" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="TurnStileServer" Relationship="Self.FK_Turnstile_TurnStileServer" FromRole="Turnstile" ToRole="TurnStileServer" />
+        </EntityType>
+        <EntityType Name="TurnStileServer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ServerIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Port" Type="Int32" Nullable="false" />
+          <Property Name="UserDefinded" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Turnstiles" Relationship="Self.FK_Turnstile_TurnStileServer" FromRole="TurnStileServer" ToRole="Turnstile" />
+        </EntityType>
+        <Association Name="FK_Ticket_TransactionDetail">
+          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="1" />
+          <End Role="Ticket" Type="Self.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TransactionDetail">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="TransactionDetailId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Transaction_Transaction">
+          <End Role="Transaction" Type="Self.Transaction" Multiplicity="0..1" />
+          <End Role="Transaction1" Type="Self.Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transaction">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Transaction1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransactionDetail_Transaction">
+          <End Role="Transaction" Type="Self.Transaction" Multiplicity="0..1" />
+          <End Role="TransactionDetail" Type="Self.TransactionDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transaction">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TransactionDetail">
+              <PropertyRef Name="TransactionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Turnstile_TurnStileServer">
+          <End Role="TurnStileServer" Type="Self.TurnStileServer" Multiplicity="1" />
+          <End Role="Turnstile" Type="Self.Turnstile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TurnStileServer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Turnstile">
+              <PropertyRef Name="ServerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GateEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tickets" EntityType="Self.Ticket" />
+          <EntitySet Name="Transactions" EntityType="Self.Transaction" />
+          <EntitySet Name="TransactionDetails" EntityType="Self.TransactionDetail" />
+          <EntitySet Name="Turnstiles" EntityType="Self.Turnstile" />
+          <EntitySet Name="TurnStileServers" EntityType="Self.TurnStileServer" />
+          <AssociationSet Name="FK_Ticket_TransactionDetail" Association="Self.FK_Ticket_TransactionDetail">
+            <End Role="TransactionDetail" EntitySet="TransactionDetails" />
+            <End Role="Ticket" EntitySet="Tickets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transaction_Transaction" Association="Self.FK_Transaction_Transaction">
+            <End Role="Transaction" EntitySet="Transactions" />
+            <End Role="Transaction1" EntitySet="Transactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransactionDetail_Transaction" Association="Self.FK_TransactionDetail_Transaction">
+            <End Role="Transaction" EntitySet="Transactions" />
+            <End Role="TransactionDetail" EntitySet="TransactionDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Turnstile_TurnStileServer" Association="Self.FK_Turnstile_TurnStileServer">
+            <End Role="TurnStileServer" EntitySet="TurnStileServers" />
+            <End Role="Turnstile" EntitySet="Turnstiles" />
+          </AssociationSet>
+          <FunctionImport Name="GetTicketBy_TDID" ReturnType="Collection(MainModel.GetTicketBy_TDID_Result)">
+          <Parameter Name="tdid" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="GetTicketByQr" ReturnType="Collection(Int32)">
+          <Parameter Name="qr" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateTicketby_No" ReturnType="Collection(Int32)">
+            <Parameter Name="qr" Mode="In" Type="Int64" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="GetTicketBy_TDID_Result">
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="TicketNo" Nullable="false" MaxLength="20" />
+          <Property Type="Int64" Name="TransactionDetailId" Nullable="false" />
+          <Property Type="Boolean" Name="Status" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="EnteranceDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+          <Property Type="Int64" Name="ReadCount" Nullable="true" />
+          <Property Type="String" Name="UserDefinded" Nullable="true" MaxLength="200" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MainModelStoreContainer" CdmEntityContainer="GateEntities">
+          <EntitySetMapping Name="Tickets">
+            <EntityTypeMapping TypeName="MainModel.Ticket">
+              <MappingFragment StoreEntitySet="Ticket">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+                <ScalarProperty Name="TransactionDetailId" ColumnName="TransactionDetailId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="EnteranceDate" ColumnName="EnteranceDate" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+                <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transactions">
+            <EntityTypeMapping TypeName="MainModel.Transaction">
+              <MappingFragment StoreEntitySet="Transaction">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+                <ScalarProperty Name="IsComplete" ColumnName="IsComplete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="PaymentTypeId" ColumnName="PaymentTypeId" />
+                <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+                <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="RecieveAmount" ColumnName="RecieveAmount" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="GiftCardId" ColumnName="GiftCardId" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="MCDiscountAmt" ColumnName="MCDiscountAmt" />
+                <ScalarProperty Name="BDDiscountAmt" ColumnName="BDDiscountAmt" />
+                <ScalarProperty Name="MemberTypeId" ColumnName="MemberTypeId" />
+                <ScalarProperty Name="MCDiscountPercent" ColumnName="MCDiscountPercent" />
+                <ScalarProperty Name="ReceivedCurrencyId" ColumnName="ReceivedCurrencyId" />
+                <ScalarProperty Name="IsSettlement" ColumnName="IsSettlement" />
+                <ScalarProperty Name="TranVouNos" ColumnName="TranVouNos" />
+                <ScalarProperty Name="IsWholeSale" ColumnName="IsWholeSale" />
+                <ScalarProperty Name="GiftCardAmount" ColumnName="GiftCardAmount" />
+                <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="TableIdOrQue" ColumnName="TableIdOrQue" />
+                <ScalarProperty Name="ServiceFee" ColumnName="ServiceFee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransactionDetails">
+            <EntityTypeMapping TypeName="MainModel.TransactionDetail">
+              <MappingFragment StoreEntitySet="TransactionDetail">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+                <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="ConsignmentPrice" ColumnName="ConsignmentPrice" />
+                <ScalarProperty Name="IsConsignmentPaid" ColumnName="IsConsignmentPaid" />
+                <ScalarProperty Name="IsFOC" ColumnName="IsFOC" />
+                <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Turnstiles">
+            <EntityTypeMapping TypeName="MainModel.Turnstile">
+              <MappingFragment StoreEntitySet="Turnstile">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="door" ColumnName="door" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+                <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+                <ScalarProperty Name="onoff" ColumnName="onoff" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TurnStileServers">
+            <EntityTypeMapping TypeName="MainModel.TurnStileServer">
+              <MappingFragment StoreEntitySet="TurnStileServer">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetTicketBy_TDID" FunctionName="MainModel.Store.GetTicketBy_TDID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MainModel.GetTicketBy_TDID_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+                <ScalarProperty Name="TransactionDetailId" ColumnName="TransactionDetailId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="EnteranceDate" ColumnName="EnteranceDate" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+                <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetTicketByQr" FunctionName="MainModel.Store.GetTicketByQr" />
+          <FunctionImportMapping FunctionImportName="UpdateTicketby_No" FunctionName="MainModel.Store.UpdateTicketby_No" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

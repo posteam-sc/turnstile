@@ -1,0 +1,82 @@
+c:\users\sourcecode-pc4\documents\visual studio 2013\Projects\ZTS\ZTS\bin\Debug\ZTS.exe.config
+c:\users\sourcecode-pc4\documents\visual studio 2013\Projects\ZTS\ZTS\bin\Debug\ZTS.exe
+c:\users\sourcecode-pc4\documents\visual studio 2013\Projects\ZTS\ZTS\bin\Debug\ZTS.pdb
+c:\users\sourcecode-pc4\documents\visual studio 2013\Projects\ZTS\ZTS\obj\Debug\ZTS.csprojResolveAssemblyReference.cache
+c:\users\sourcecode-pc4\documents\visual studio 2013\Projects\ZTS\ZTS\obj\Debug\ZTS.Form1.resources
+c:\users\sourcecode-pc4\documents\visual studio 2013\Projects\ZTS\ZTS\obj\Debug\ZTS.Properties.Resources.resources
+c:\users\sourcecode-pc4\documents\visual studio 2013\Projects\ZTS\ZTS\obj\Debug\ZTS.csproj.GenerateResource.Cache
+c:\users\sourcecode-pc4\documents\visual studio 2013\Projects\ZTS\ZTS\obj\Debug\ZTS.exe
+c:\users\sourcecode-pc4\documents\visual studio 2013\Projects\ZTS\ZTS\obj\Debug\ZTS.pdb
+c:\users\sourcecode-pc4\documents\visual studio 2013\Projects\ZTS\ZTS\obj\Debug\ZTS.Form2.resources
+C:\Users\Sourcecode-PC4\Documents\Visual Studio 2013\Projects\ZTS\ZTS\obj\Debug\ZTS.Forms.MainForm.resources
+C:\Users\Sourcecode-PC4\Documents\Visual Studio 2013\Projects\ZTS\ZTS\obj\Debug\ZTS.Forms.RegisterTurnstile.resources
+C:\Users\Sourcecode-PC4\Documents\Visual Studio 2013\Projects\ZTS\ZTS\obj\Debug\ZTS.Forms.RegisterWatchServer.resources
+C:\Users\Sourcecode-PC4\Documents\Visual Studio 2013\Projects\ZTS\ZTS\obj\Debug\ZTS.Forms.WatchTurnstiles.resources
+C:\Users\Sourcecode-PC4\Documents\Visual Studio 2013\Projects\ZTS\ZTS\bin\Debug\EntityFramework.dll
+C:\Users\Sourcecode-PC4\Documents\Visual Studio 2013\Projects\ZTS\ZTS\bin\Debug\EntityFramework.xml
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\bin\Debug\ZTS.exe.config
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\bin\Debug\ZTS.exe
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\bin\Debug\ZTS.pdb
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\bin\Debug\EntityFramework.dll
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\bin\Debug\EntityFramework.xml
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\obj\Debug\ZTS.Forms.FunctionsTest.resources
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\obj\Debug\ZTS.Forms.MainForm.resources
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\obj\Debug\ZTS.Forms.RegisterTurnstile.resources
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\obj\Debug\ZTS.Forms.RegisterWatchServer.resources
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\obj\Debug\ZTS.Properties.Resources.resources
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\obj\Debug\ZTS.csproj.GenerateResource.Cache
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\obj\Debug\ZTS.exe
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\obj\Debug\ZTS.pdb
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS\ZTS\obj\Debug\ZTS.csprojResolveAssemblyReference.cache
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS - Copy\ZTS\bin\Debug\ZTS.exe.config
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS - Copy\ZTS\obj\Debug\ZTS.exe
+C:\Users\Sourcecode-PC4\Desktop\Turnstile System\ZTS - Copy\ZTS\obj\Debug\ZTS.pdb
+E:\ALL Projects\TrunstileControl\trunk\ZTS\bin\Debug\ZTS.exe.config
+E:\ALL Projects\TrunstileControl\trunk\ZTS\bin\Debug\ZTS.exe
+E:\ALL Projects\TrunstileControl\trunk\ZTS\bin\Debug\ZTS.pdb
+E:\ALL Projects\TrunstileControl\trunk\ZTS\bin\Debug\EntityFramework.dll
+E:\ALL Projects\TrunstileControl\trunk\ZTS\bin\Debug\EntityFramework.xml
+E:\ALL Projects\TrunstileControl\trunk\ZTS\obj\Debug\ZTS.Forms.FunctionsTest.resources
+E:\ALL Projects\TrunstileControl\trunk\ZTS\obj\Debug\ZTS.Forms.MainForm.resources
+E:\ALL Projects\TrunstileControl\trunk\ZTS\obj\Debug\ZTS.Forms.RegisterTurnstile.resources
+E:\ALL Projects\TrunstileControl\trunk\ZTS\obj\Debug\ZTS.Forms.RegisterWatchServer.resources
+E:\ALL Projects\TrunstileControl\trunk\ZTS\obj\Debug\ZTS.Properties.Resources.resources
+E:\ALL Projects\TrunstileControl\trunk\ZTS\obj\Debug\ZTS.csproj.GenerateResource.Cache
+E:\ALL Projects\TrunstileControl\trunk\ZTS\obj\Debug\ZTS.exe
+E:\ALL Projects\TrunstileControl\trunk\ZTS\obj\Debug\ZTS.pdb
+E:\ALL Projects\TrunstileControl\trunk\ZTS\obj\Debug\ZTS.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\trunk\ZTS\bin\Debug\ZTS.exe.config
+C:\Users\Administrator\Desktop\trunk\ZTS\obj\Debug\ZTS.exe
+C:\Users\Administrator\Desktop\trunk\ZTS\obj\Debug\ZTS.pdb
+C:\Users\Administrator\Desktop\trunk\ZTS\bin\Debug\ZTS.exe
+C:\Users\Administrator\Desktop\trunk\ZTS\bin\Debug\ZTS.pdb
+C:\Users\Administrator\Desktop\trunk\ZTS\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Desktop\trunk\ZTS\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Desktop\trunk\ZTS\obj\Debug\ZTS.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\trunk\ZTS\obj\Debug\ZTS.Forms.FunctionsTest.resources
+C:\Users\Administrator\Desktop\trunk\ZTS\obj\Debug\ZTS.Forms.MainForm.resources
+C:\Users\Administrator\Desktop\trunk\ZTS\obj\Debug\ZTS.Forms.RegisterTurnstile.resources
+C:\Users\Administrator\Desktop\trunk\ZTS\obj\Debug\ZTS.Forms.RegisterWatchServer.resources
+C:\Users\Administrator\Desktop\trunk\ZTS\obj\Debug\ZTS.Properties.Resources.resources
+C:\Users\Administrator\Desktop\trunk\ZTS\obj\Debug\ZTS.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\trunk\ZTS\bin\Debug\ZTS.Watch.exe
+C:\Users\Administrator\Desktop\trunk\ZTS\bin\Debug\ZTS.Watch.pdb
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\bin\Debug\ZTS.exe.config
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\bin\Debug\ZTS.exe
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\bin\Debug\ZTS.pdb
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\bin\Debug\EntityFramework.dll
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\bin\Debug\Gate1.Watch.exe
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\bin\Debug\Gate1.Watch.pdb
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\bin\Debug\Gate1.Watch.exe.config
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\bin\Debug\EntityFramework.xml
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\obj\Debug\ZTS.csprojAssemblyReference.cache
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\obj\Debug\ZTS.Forms.FunctionsTest.resources
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\obj\Debug\ZTS.Forms.MainForm.resources
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\obj\Debug\ZTS.Forms.RegisterTurnstile.resources
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\obj\Debug\ZTS.Forms.RegisterWatchServer.resources
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\obj\Debug\ZTS.Properties.Resources.resources
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\obj\Debug\ZTS.csproj.GenerateResource.cache
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\obj\Debug\ZTS.csproj.CoreCompileInputs.cache
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\obj\Debug\ZTS.csproj.CopyComplete
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\obj\Debug\ZTS.exe
+D:\SourceCodeCo\Sourcecode\Current Update Project (SC)\turnstile\ZTS\obj\Debug\ZTS.pdb

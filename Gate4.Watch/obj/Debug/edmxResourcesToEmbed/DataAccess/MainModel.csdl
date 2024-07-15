@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MainModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="GateEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TurnStileServers" EntityType="MainModel.TurnStileServer" />
+    <EntitySet Name="Tickets" EntityType="MainModel.Ticket" />
+    <EntitySet Name="Turnstiles" EntityType="MainModel.Turnstile" />
+    <AssociationSet Name="FK_Turnstile_TurnStileServer" Association="MainModel.FK_Turnstile_TurnStileServer">
+      <End Role="TurnStileServer" EntitySet="TurnStileServers" />
+      <End Role="Turnstile" EntitySet="Turnstiles" />
+    </AssociationSet>
+    <FunctionImport Name="UpdateTicketby_No" ReturnType="Collection(Int32)">
+      <Parameter Name="qr" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="TurnStileServer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ServerIP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Port" Type="Int32" Nullable="false" />
+    <Property Name="UserDefinded" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Turnstiles" Relationship="MainModel.FK_Turnstile_TurnStileServer" FromRole="TurnStileServer" ToRole="Turnstile" />
+  </EntityType>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TicketNo" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionDetailId" Type="Int64" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EnteranceDate" Type="DateTime" Precision="3" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReadCount" Type="Int64" />
+    <Property Name="UserDefinded" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="isDelete" Type="Boolean" />
+    <Property Name="UserName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+    <Property Name="RePrint" Type="Int32" />
+    <Property Name="PlaceStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Turnstile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNo" Type="Int32" Nullable="false" />
+    <Property Name="IP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Port" Type="Int32" Nullable="false" />
+    <Property Name="door" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="ServerID" Type="Int32" Nullable="false" />
+    <Property Name="UserDefinded" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="onoff" Type="Boolean" Nullable="false" />
+    <Property Name="PlaceStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsAcceptChild" Type="Boolean" />
+    <NavigationProperty Name="TurnStileServer" Relationship="MainModel.FK_Turnstile_TurnStileServer" FromRole="Turnstile" ToRole="TurnStileServer" />
+  </EntityType>
+  <Association Name="FK_Turnstile_TurnStileServer">
+    <End Type="MainModel.TurnStileServer" Role="TurnStileServer" Multiplicity="1" />
+    <End Type="MainModel.Turnstile" Role="Turnstile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TurnStileServer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Turnstile">
+        <PropertyRef Name="ServerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

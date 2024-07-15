@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MainModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TicketNo" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TicketNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TransactionDetailId" Type="bigint" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="EnteranceDate" Type="datetime" />
+          <Property Name="Category" Type="varchar" MaxLength="50" />
+          <Property Name="ReadCount" Type="bigint" />
+          <Property Name="UserDefinded" Type="nvarchar" MaxLength="200" />
+          <Property Name="isDelete" Type="bit" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="200" />
+          <Property Name="DeletedDate" Type="datetime" />
+          <Property Name="RePrint" Type="int" />
+          <Property Name="PlaceStatus" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Turnstile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="SerialNo" Type="int" Nullable="false" />
+          <Property Name="IP" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Port" Type="int" Nullable="false" />
+          <Property Name="door" Type="int" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+          <Property Name="ServerID" Type="int" Nullable="false" />
+          <Property Name="UserDefinded" Type="nvarchar" MaxLength="200" />
+          <Property Name="onoff" Type="bit" Nullable="false" />
+          <Property Name="PlaceStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsAcceptChild" Type="bit" />
+        </EntityType>
+        <EntityType Name="TurnStileServer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ServerIP" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Port" Type="int" Nullable="false" />
+          <Property Name="UserDefinded" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <Association Name="FK_Turnstile_TurnStileServer">
+          <End Role="TurnStileServer" Type="Self.TurnStileServer" Multiplicity="1" />
+          <End Role="Turnstile" Type="Self.Turnstile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TurnStileServer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Turnstile">
+              <PropertyRef Name="ServerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="UpdateTicketby_No" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="qr" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="MainModelStoreContainer">
+          <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Turnstile" EntityType="Self.Turnstile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TurnStileServer" EntityType="Self.TurnStileServer" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Turnstile_TurnStileServer" Association="Self.FK_Turnstile_TurnStileServer">
+            <End Role="TurnStileServer" EntitySet="TurnStileServer" />
+            <End Role="Turnstile" EntitySet="Turnstile" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MainModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GateEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TurnStileServers" EntityType="MainModel.TurnStileServer" />
+          <EntitySet Name="Tickets" EntityType="MainModel.Ticket" />
+          <EntitySet Name="Turnstiles" EntityType="MainModel.Turnstile" />
+          <AssociationSet Name="FK_Turnstile_TurnStileServer" Association="MainModel.FK_Turnstile_TurnStileServer">
+            <End Role="TurnStileServer" EntitySet="TurnStileServers" />
+            <End Role="Turnstile" EntitySet="Turnstiles" />
+          </AssociationSet>
+          <FunctionImport Name="UpdateTicketby_No" ReturnType="Collection(Int32)">
+            <Parameter Name="qr" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="TurnStileServer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ServerIP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Port" Type="Int32" Nullable="false" />
+          <Property Name="UserDefinded" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Turnstiles" Relationship="MainModel.FK_Turnstile_TurnStileServer" FromRole="TurnStileServer" ToRole="Turnstile" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="TicketNo" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TicketNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TransactionDetailId" Type="Int64" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EnteranceDate" Type="DateTime" Precision="3" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReadCount" Type="Int64" />
+          <Property Name="UserDefinded" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="isDelete" Type="Boolean" />
+          <Property Name="UserName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+          <Property Name="RePrint" Type="Int32" />
+          <Property Name="PlaceStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Turnstile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SerialNo" Type="Int32" Nullable="false" />
+          <Property Name="IP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Port" Type="Int32" Nullable="false" />
+          <Property Name="door" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+          <Property Name="ServerID" Type="Int32" Nullable="false" />
+          <Property Name="UserDefinded" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="onoff" Type="Boolean" Nullable="false" />
+          <Property Name="PlaceStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsAcceptChild" Type="Boolean" />
+          <NavigationProperty Name="TurnStileServer" Relationship="MainModel.FK_Turnstile_TurnStileServer" FromRole="Turnstile" ToRole="TurnStileServer" />
+        </EntityType>
+        <Association Name="FK_Turnstile_TurnStileServer">
+          <End Type="MainModel.TurnStileServer" Role="TurnStileServer" Multiplicity="1" />
+          <End Type="MainModel.Turnstile" Role="Turnstile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TurnStileServer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Turnstile">
+              <PropertyRef Name="ServerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MainModelStoreContainer" CdmEntityContainer="GateEntities">
+          <EntitySetMapping Name="TurnStileServers">
+            <EntityTypeMapping TypeName="MainModel.TurnStileServer">
+              <MappingFragment StoreEntitySet="TurnStileServer">
+                <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="ServerIP" ColumnName="ServerIP" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tickets">
+            <EntityTypeMapping TypeName="MainModel.Ticket">
+              <MappingFragment StoreEntitySet="Ticket">
+                <ScalarProperty Name="PlaceStatus" ColumnName="PlaceStatus" />
+                <ScalarProperty Name="RePrint" ColumnName="RePrint" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+                <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+                <ScalarProperty Name="ReadCount" ColumnName="ReadCount" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="EnteranceDate" ColumnName="EnteranceDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TransactionDetailId" ColumnName="TransactionDetailId" />
+                <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Turnstiles">
+            <EntityTypeMapping TypeName="MainModel.Turnstile">
+              <MappingFragment StoreEntitySet="Turnstile">
+                <ScalarProperty Name="IsAcceptChild" ColumnName="IsAcceptChild" />
+                <ScalarProperty Name="PlaceStatus" ColumnName="PlaceStatus" />
+                <ScalarProperty Name="onoff" ColumnName="onoff" />
+                <ScalarProperty Name="UserDefinded" ColumnName="UserDefinded" />
+                <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="door" ColumnName="door" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="UpdateTicketby_No" FunctionName="MainModel.Store.UpdateTicketby_No" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

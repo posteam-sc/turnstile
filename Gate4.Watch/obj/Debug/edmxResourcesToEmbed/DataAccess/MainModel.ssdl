@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MainModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TicketNo" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TicketNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="TransactionDetailId" Type="bigint" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="EnteranceDate" Type="datetime" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="ReadCount" Type="bigint" />
+    <Property Name="UserDefinded" Type="nvarchar" MaxLength="200" />
+    <Property Name="isDelete" Type="bit" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="200" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="RePrint" Type="int" />
+    <Property Name="PlaceStatus" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Turnstile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="SerialNo" Type="int" Nullable="false" />
+    <Property Name="IP" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Port" Type="int" Nullable="false" />
+    <Property Name="door" Type="int" Nullable="false" />
+    <Property Name="status" Type="bit" Nullable="false" />
+    <Property Name="ServerID" Type="int" Nullable="false" />
+    <Property Name="UserDefinded" Type="nvarchar" MaxLength="200" />
+    <Property Name="onoff" Type="bit" Nullable="false" />
+    <Property Name="PlaceStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsAcceptChild" Type="bit" />
+  </EntityType>
+  <EntityType Name="TurnStileServer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ServerIP" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Port" Type="int" Nullable="false" />
+    <Property Name="UserDefinded" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="FK_Turnstile_TurnStileServer">
+    <End Role="TurnStileServer" Type="Self.TurnStileServer" Multiplicity="1" />
+    <End Role="Turnstile" Type="Self.Turnstile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TurnStileServer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Turnstile">
+        <PropertyRef Name="ServerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="UpdateTicketby_No" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="qr" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="MainModelStoreContainer">
+    <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Turnstile" EntityType="Self.Turnstile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TurnStileServer" EntityType="Self.TurnStileServer" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Turnstile_TurnStileServer" Association="Self.FK_Turnstile_TurnStileServer">
+      <End Role="TurnStileServer" EntitySet="TurnStileServer" />
+      <End Role="Turnstile" EntitySet="Turnstile" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
